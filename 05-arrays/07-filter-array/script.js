@@ -90,5 +90,15 @@
     ];
 
     // your code here
+    var plus18 = [];
 
+        document.getElementById("run").addEventListener("click", function(){
+        people.forEach(function(i){
+            if (i['age'] > 18){
+                plus18.push(i);
+            }
+        });
+
+        console.log(plus18);
+    });
 })();
