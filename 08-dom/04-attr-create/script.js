@@ -12,5 +12,8 @@
 (function() {
 
     // your code here
-
+    let x = document.querySelector('#source').getAttribute('data-image');
+    let img = document.createElement('img')
+    img.setAttribute('src', x);
+    document.querySelector('#source').appendChild(img);
 })();

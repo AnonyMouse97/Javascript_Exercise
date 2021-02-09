@@ -12,5 +12,13 @@
 (function() {
 
     // your code here
+let table = document.createElement("table")
+document.querySelector('#target').appendChild(table);
 
+for (var i = 0; i < 10; i++) {
+	let tr = document.createElement('tr');
+	document.querySelector('table').appendChild(tr);
+	let td = document.createElement('td');
+	tr.appendChild(td);
+}
 })();

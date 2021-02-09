@@ -20,5 +20,15 @@
     ];
 
     // your code here
+    let x = 1;
+
+    document.querySelector('#next').addEventListener('click', function(){
+    	document.querySelector('img').setAttribute('src', gallery[x]);
+    	x++;
+    	if (x == gallery.length) {
+    		x = 0;
+    	}
+    	console.log(x);
+    });
 
 })();

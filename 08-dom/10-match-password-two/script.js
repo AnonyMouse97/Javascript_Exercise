@@ -12,5 +12,13 @@
 (function() {
 
     // your code here
+    let x = document.querySelector('#pass-one').value;
+    let y = document.querySelector('#pass-two').value;
+
+    document.querySelector('#run').addEventListener('click', function(){
+    	if (x != y) {
+    		document.querySelector('input').classList.add('error');
+    	}
+    });
 
 })();

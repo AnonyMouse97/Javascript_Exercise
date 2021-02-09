@@ -12,5 +12,17 @@
 (function() {
 
     // your code here
+    let x = document.querySelector('#pass-one').value;
+    let y = document.querySelector('#pass-two').value;
+
+    document.querySelector('#run').addEventListener('click', function(){
+    	if (x != y) {
+    		document.querySelector('#pass-one').style.border = "1px solid red";
+    		document.querySelector('#pass-two').style.border = "1px solid red";
+    	}else{
+    		document.querySelector('#pass-one').style.border = "1px solid silver";
+    		document.querySelector('#pass-two').style.border = "1px solid silver";
+    	}
+    });
 
 })();

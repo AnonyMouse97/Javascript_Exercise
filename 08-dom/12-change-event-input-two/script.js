@@ -12,5 +12,15 @@
 (function() {
 
     // your code here
+    document.querySelector('#pass-one').addEventListener('input', function(){
+		let x = document.querySelector('#pass-one').value;
+		let y = \d[0-9]{2}\w[a-zA-Z0-9_] ;
+		if (y.test) {
+			document.querySelector('#validity').innerHTML = 'ok';
+		}else{
+			document.querySelector('#validity').innerHTML = 'Not ok';
+		}
+		// /\d{2}
+	});
 
 })();

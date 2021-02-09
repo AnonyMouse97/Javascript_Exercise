@@ -16,8 +16,7 @@
 
         // take values from form
     	let day = document.getElementById("dob-day").value;
-    	let month = document.getElementById("dob-month").value;
-    	month = month  -1;
+    	let month = document.getElementById("dob-month").value - 1;
     	let year = document.getElementById("dob-year").value;
 
         // define birthdate
@@ -42,10 +41,9 @@
         // compare both dates
         if (curWoYears === birthdate){
             message = 'Happy Birthday by the way !'
-        }else if (curWoYears < birthdate) {
+        }else if (curWoYears > birthdate) {
             message = 'You already had you birthday this year, be patient !'
-        }
-        else if (curWoYears > birthdate) {
+        }else if (curWoYears < birthdate) {
             yearsDiff -= 1;
             message = 'Your Birthday is still to come this year, be patient !'
         }

@@ -12,5 +12,9 @@
 (function() {
 
     // your code here
-
+	document.querySelector('#pass-one').addEventListener('input', function(){
+		let x = document.querySelector('#pass-one').value;
+		document.querySelector('#pass-one').maxLength = 10;
+		document.querySelector('#counter').innerHTML = `${x.length}/10`;
+	});
 })();
