@@ -12,5 +12,18 @@
 (() => {
     const keys = ["name", "species", "age", "gender", "color"];
     const values = ["Skitty", "cat", 9, "female", "tabby"];
+    
     // your code here
+    let obj = {};
+
+    for (let i = 0 ; i < keys.length; i++) {
+    	obj[keys[i]] = values[i];
+    }
+
+    //const arrayFusion = Object.fromEntries(keys.map((_, i) => [keys[i], values[i]]));
+
+	document.getElementById('run').addEventListener('click', function(){
+    	console.log(obj);
+	});
 })();
+

@@ -26,5 +26,23 @@
         os: "linux",
         user: null,
     };
-    // your code here
+
+document.getElementById('run').addEventListener('click', function(){
+
+    for(key in computers){
+        if (computers[key].available === undefined){
+            computers[key].available = defaultProps.available;
+        }
+        if (computers[key].user === undefined){
+            computers[key].user = defaultProps.user;
+        }
+        if(computers[key].os === undefined){
+            computers[key].os = defaultProps.os;
+        }    
+    }
+    console.log(computers);
+});
+
+    
+    
 })();

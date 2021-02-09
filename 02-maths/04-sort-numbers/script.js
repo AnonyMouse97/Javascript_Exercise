@@ -17,7 +17,7 @@
 
         // your code here
         let x = document.getElementById("numbers").value;
-        let z = x.split(",")
+        let z = x.split(",");
         console.log(z);
         
 		let y = [];

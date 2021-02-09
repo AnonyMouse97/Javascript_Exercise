@@ -91,4 +91,15 @@
 
     // your code here
 
+document.getElementById('run').addEventListener('click', function(){
+        let y = [];
+        people.forEach(function(info){
+            y.push(info['age']);
+        });
+
+        let sum = y.reduce((a,b) => a + b);
+
+        alert(sum);
+    });
+
 })();

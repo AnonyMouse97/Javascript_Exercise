@@ -44,4 +44,6 @@
         people.forEach(guy  => console.log(guy['firstname']));    
     });
 
+    // alt : ['firstname'] = .firstname
+
 })();

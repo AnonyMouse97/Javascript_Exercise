@@ -27,5 +27,11 @@
     ];
 
     // your code here
-
+    document.getElementById("run").addEventListener("click", function(){
+        fruits.forEach(function(fruit){
+            if (fruit === 'apple') {
+                console.log('yes');
+            }
+        });    
+    });
 })();

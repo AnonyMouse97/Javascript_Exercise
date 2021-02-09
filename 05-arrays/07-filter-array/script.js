@@ -100,5 +100,7 @@
         });
 
         console.log(plus18);
+
+        //alt : filter()
     });
 })();

@@ -29,5 +29,22 @@
     ];
 
     // your code here
+    document.getElementById('run').addEventListener('click', function(){
+      
+   // sort, then, compare to index +1, if === => slice it
+   let sorted = fruits.sort();
 
+   for (var i = 0; i < sorted.length; i++) {
+       if (sorted[i] == sorted[i+1]) {
+        sorted.splice(i, 1);
+        i--;
+       }
+   }
+       
+    console.log(sorted);
+    
+    //use funtion indexOf() instead;
+      
+      
+    });
 })();
