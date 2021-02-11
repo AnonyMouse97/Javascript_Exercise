@@ -22,6 +22,6 @@ for (var i = 1; i < 11; i++) {
 		let td = document.createElement('td');
 		tr.appendChild(td).innerHTML = i*n;
 	}
-	
 }
+
 })();

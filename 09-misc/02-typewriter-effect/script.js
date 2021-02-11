@@ -12,5 +12,13 @@
 (function() {
 
     // your code here
-
+    let x = document.getElementById('target').textContent;
+    let i = 0;
+    let y = '';
+    setInterval(function(){
+    	y = y + x.charAt(i);
+    	document.getElementById('target').innerHTML = y;
+    	i++;
+    },100);
+   
 })();

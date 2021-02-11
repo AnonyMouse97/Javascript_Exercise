@@ -14,13 +14,15 @@
     // your code here
     document.querySelector('#pass-one').addEventListener('input', function(){
 		let x = document.querySelector('#pass-one').value;
-		let y = \d[0-9]{2}\w[a-zA-Z0-9_] ;
-		if (y.test) {
+		//let y = w
+		if (x.match(^(?=.\w)(?=(.\d){2,})(?=.{8,}))) {
 			document.querySelector('#validity').innerHTML = 'ok';
 		}else{
 			document.querySelector('#validity').innerHTML = 'Not ok';
+			console.log('not OK');
 		}
-		// /\d{2}
+
+		// ^(?=.[a-z])(?=(.[0-9]){2,})(?=.{8,}))
 	});
 
 })();

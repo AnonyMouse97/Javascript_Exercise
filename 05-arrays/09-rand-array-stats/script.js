@@ -12,7 +12,8 @@
 (function() {
 
     // your code here
-    // td n-1 -> n-10
+
+
     document.getElementById('run').addEventListener('click', function(){
     	let y = [];
     	for (var i = 0; i < 10; i++) {

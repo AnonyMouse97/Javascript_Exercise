@@ -12,5 +12,12 @@
 (function() {
 
     // your code here
+    // onmousemove
+    
+    document.querySelector('#slider').onmousemove = event =>{
+    	let x = document.querySelector('#slider').value;
+    	document.querySelector('#target').innerHTML = x;
+    }
+    
 
 })();

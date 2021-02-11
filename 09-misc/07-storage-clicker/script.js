@@ -11,6 +11,14 @@
 
 (function() {
 
+	
     // your code here
-
+    document.querySelector('#target').innerHTML = parseInt(localStorage.getItem('increment'));
+    
+    document.querySelector('#increment').addEventListener('click', function(){
+    	let increment = parseInt(localStorage.getItem('increment'));
+    	localStorage.setItem('increment', ++increment);
+    	document.querySelector('#target').innerHTML = increment;
+    });
+    //console.log(x);
 })();

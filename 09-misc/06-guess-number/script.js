@@ -12,5 +12,29 @@
 (function() {
 
     // your code here
-
+    let x = Math.floor(Math.random()*100);
+    let y = 1;
+    let z = prompt('A guess ?');
+    
+   
+    while(x != z && isNaN(z) == false){
+    	if(x > z){
+	    	alert("Higher !");
+	    	y++;
+	    	z = prompt('A guess ?');
+	    }else if (x < z) {
+	    	alert("Lower !");
+	    	y++;
+	    	z = prompt('A guess ?');
+	    }
+    }
+    	
+    if (z == x){
+		alert("that's it!\n you needed " + y + " guesses");
+    }
+    if (isNaN(z)){
+    	alert('bruh, "'+ z +'" is not a number...');
+    }
+   
+    
 })();

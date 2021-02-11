@@ -15,5 +15,8 @@
     let x = document.querySelector('#source').getAttribute('data-image');
     let img = document.createElement('img')
     img.setAttribute('src', x);
-    document.querySelector('#source').appendChild(img);
+    document.querySelector('#target').appendChild(img);
+
+    //img.src to change src instead of setAttribute
+
 })();
