@@ -19,16 +19,15 @@
     words.push(x.slice(27,33));
     words.push(x.slice(34,40));
     words.push(x.slice(41,));
-    console.log(words);
-    let fontSize = ['x-small','x-large','small','medium','xx-large']
 
     document.getElementById('target').innerHTML = '';
 
     for (var i = 0 ; i < words.length; i++) {
-    	document.createTextNode(words[i]); 
-    	getElementById('target').appendChild();
-    	//document.getElementById('target').style.fontSize = font-size[i];
-
+        let y = Math.floor(Math.random()*4);
+    	let p = document.createElement('p');
+        p.setAttribute('style', `font-size : ${y}em ; display: inline;`)
+        p.innerHTML = words[i];
+    	document.getElementById('target').appendChild(p);
     }
     
 })();

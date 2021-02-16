@@ -13,15 +13,15 @@
 
     // your code here
     document.getElementById("run").addEventListener("click", function() {
-    	let r = Math.floor(Math.random() * 256);
-    	let g = Math.floor(Math.random() * 256);
-    	let b = Math.floor(Math.random() * 256);
+    	let r = Math.floor(Math.random() * 255);
+    	let g = Math.floor(Math.random() * 255);
+    	let b = Math.floor(Math.random() * 255);
 
 
     	document.body.style.background = "rgb(" + r + "," + g + "," + b +")";
     });
 
-    /* alternate code vy max
+     /*alternate code vy max
 
 		function getRandomColor() {
         var letters = '0123456789ABCDEF';
@@ -30,8 +30,7 @@
           color += letters[Math.floor(Math.random() * 16)];
         }
         return color;
-      }
+      }*/
 
-    */
-
+   
 })();

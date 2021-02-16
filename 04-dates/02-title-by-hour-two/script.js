@@ -19,7 +19,6 @@
     let minutes = current.getMinutes();
 
     let x = hours * 60 + minutes;
-    console.log(x);
 
     if (x>=1050) {
     	document.getElementById("target").innerHTML = "Good evening";

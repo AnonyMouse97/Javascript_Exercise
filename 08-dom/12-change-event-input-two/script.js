@@ -14,8 +14,7 @@
     // your code here
     document.querySelector('#pass-one').addEventListener('input', function(){
 		let x = document.querySelector('#pass-one').value;
-		//let y = w
-		if (x.match(^(?=.\w)(?=(.\d){2,})(?=.{8,}))) {
+		if (x.match('(?=(.*\\d){2})[a-zA-Z0-9]{8,}')) {
 			document.querySelector('#validity').innerHTML = 'ok';
 		}else{
 			document.querySelector('#validity').innerHTML = 'Not ok';
