@@ -44,6 +44,7 @@
     console.log(sorted);
     
     //use funtion indexOf() instead;
+    // transform to set
       
       
     });

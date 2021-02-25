@@ -6,34 +6,38 @@
  * started at 26/10/2018
  */
 
-// NOTE: don't focus on the existing code structure for now.
+// NOTE: don't focus on the enumberisting code structure for now.
 // You will have time to focus on it later.
 
 (function() {
 
     // your code here
-    let x = Math.floor(Math.random()*100);
-    let y = 1;
-    let z = prompt('A guess ?');
+
+	// set random and counter
+    let number = Math.floor(Math.random()*100);
+	console.log(number);
+    let i = 1;
+    let guess = prompt('A guess ?');
     
-   
-    while(x != z && isNaN(z) == false){
-    	if(x > z){
+   // loop till the guess is correct (additional statement, guess is a number)
+    while(number != guess && isNaN(guess) == false){
+    	if(number > guess){
 	    	alert("Higher !");
-	    	y++;
-	    	z = prompt('A guess ?');
-	    }else if (x < z) {
+	    	i++;
+	    	guess = prompt('A guess ?');
+	    }else if (number < guess) {
 	    	alert("Lower !");
-	    	y++;
-	    	z = prompt('A guess ?');
+	    	i++;
+	    	guess = prompt('A guess ?');
 	    }
     }
-    	
-    if (z == x){
-		alert("that's it!\n you needed " + y + " guesses");
+    
+	// display message for good guess or NaN
+    if (guess == number){
+		alert(`that's it!\n you needed ${i} guesses`);
     }
-    if (isNaN(z)){
-    	alert('bruh, "'+ z +'" is not a number...');
+    if (isNaN(guess)){
+    	alert(`'${guess}' is not even a number asshole...`);
     }
    
     

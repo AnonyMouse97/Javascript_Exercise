@@ -26,4 +26,11 @@
     	console.log(obj);
 	});
 })();
+/*
+(or create array)
+entries = new Map();
+for
+entries.set(keys[i].values[i]);
+Object.fromEntries(entires)
 
+*/

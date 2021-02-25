@@ -15,14 +15,22 @@
     	constructor(x,y){
     		this.firstname = x;
     		this.lastname = y;
-    		this.name = `${this.firstname} ${this.lastname}`
     	}
+		get getName(){
+			return `${this.firstname} ${this.lastname}`;
+		}
+		set setName(text){
+			let arrayName = text.split(' ');
+			this.firstname = arrayName[0]; 
+			this.lastname = arrayName[1];
+		}
     }
 
     document.getElementById('run').addEventListener('click',function(){
-    	let person = new Person('Nick', 'Tamer');
-    	console.log(person);
-    	person = new Person('Fizz', 'Deup')
-    	console.log(person);
+    	const firstPerson = new Person();
+		firstPerson.setName = 'nick Tamer';
+		console.log(firstPerson.getName);
+		firstPerson.setName = 'fizz deup'
+		console.log(firstPerson.getName);
     });
 })();

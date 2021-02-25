@@ -14,23 +14,16 @@
         constructor(name){
             this.name= name;
         }
-        static get greeting(){
-              return '';  
-        }
         sayHello() {
             return `${this.constructor.greeting}! I'm ${this.name}!`;
         }
     }
 
     class Cat extends Animal{
-        static get greeting(){
-            return "Meaow";
-        }
+        static greeting = 'Meaow';
     }
     class Dog extends Animal{
-        static get greeting(){
-            return "Woof";
-        }
+        static greeting = 'Woof';
     }
     // your code here
     document.getElementById('run').addEventListener('click',function(){

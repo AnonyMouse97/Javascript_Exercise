@@ -15,10 +15,11 @@
     let x = document.getElementById('target').textContent;
     let i = 0;
     let y = '';
+    let rand = Math.floor(Math.random()*100);
     setInterval(function(){
     	y = y + x.charAt(i);
     	document.getElementById('target').innerHTML = y;
     	i++;
-    },100);
+    },rand);
    
 })();

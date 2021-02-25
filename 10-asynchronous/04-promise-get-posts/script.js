@@ -11,4 +11,10 @@
 
 (() => {
     // your code here
+    document.querySelector('#run').addEventListener('click', function(){
+        window.lib.getPosts().then((x) =>{
+            console.log(x);
+        })
+    });
+    
 })();

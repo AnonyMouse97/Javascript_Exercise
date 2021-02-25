@@ -41,8 +41,6 @@ document.getElementById('run').addEventListener('click', function(){
         }    
     }
     console.log(computers);
-});
-
-    
-    
+}); 
 })();
+// Object.assign() instead of if's ?

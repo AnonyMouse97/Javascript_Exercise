@@ -17,7 +17,7 @@ class Person{
 		this.lastname = lastname;
 	}
 	sayHello(){
-		alert('Hello, ' + this.firstname + ' ' + this.lastname)
+		alert(`Hello ${this.firstname} ${this.lastname}`)
 	}
 
 }

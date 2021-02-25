@@ -11,4 +11,25 @@
 
 (() => {
     // your code here
+
+    async function getHeroes() {
+
+        const x = await fetch('http://localhost:3000/heroes');
+        const y = await x.json();
+
+        y.forEach(({ name, alterEgo, abilities }) => {
+            const clone = document.querySelector('#tpl-hero').cloneNode(true).content;
+
+            clone.querySelector('.name').innerHTML = name;
+            clone.querySelector('.alter-ego').innerHTML = alterEgo;
+            clone.querySelector('.powers').innerHTML = abilities.join('. ');
+
+            document.querySelector('#target').appendChild(clone);
+
+        });
+    }
+
+    document.querySelector('#run').addEventListener('click', function () {
+        getHeroes();
+    });
 })();

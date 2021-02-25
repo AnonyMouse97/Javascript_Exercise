@@ -11,4 +11,28 @@
 
 (() => {
     // your code here
+    const clone = document.querySelector('#tpl-hero').cloneNode(true).content;
+    document.querySelector('#target').appendChild(clone);
+
+    async function getHeroes() {
+        try {
+            const x = await fetch('http://localhost:3000/heroes');
+            const y = await x.json();
+
+            y.forEach(element => {
+                let z = document.querySelector('#hero-id').value;
+                if (element.id == z) {
+                    document.querySelector('.name').innerHTML = element.name;
+                    document.querySelector('.alter-ego').innerHTML = element.alterEgo;
+                    document.querySelector('.powers').innerHTML = element.abilities.join('. ');
+                }
+            });
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    document.querySelector('#run').addEventListener('click', function () {
+        getHeroes();
+    });
 })();

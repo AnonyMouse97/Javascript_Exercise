@@ -13,12 +13,28 @@
 
 	
     // your code here
-    document.querySelector('#target').innerHTML = parseInt(localStorage.getItem('increment'));
     
+    // find increment value of localStorage
+    let i = localStorage.getItem('increment');
+
+    // for first time i needs to be set to 0;
+    if(i == null){
+        localStorage.setItem('increment', 0);
+    }
+
+    // display increment in html
+    document.querySelector('.counter').innerHTML = i;
+
+    // on click 1) increment, 2) display it, 3) store it
     document.querySelector('#increment').addEventListener('click', function(){
-    	let increment = parseInt(localStorage.getItem('increment'));
-    	localStorage.setItem('increment', ++increment);
-    	document.querySelector('#target').innerHTML = increment;
-    });
-    //console.log(x);
+        i++;
+        document.querySelector('.counter').innerHTML = i;
+        localStorage.setItem('increment', i)
+    })
+
+    // small reset for tests
+    /* let clear = confirm('Do you want to clear ?');
+    if(clear == true){
+        localStorage.clear();
+    } */
 })();

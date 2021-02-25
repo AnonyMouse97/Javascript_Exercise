@@ -12,3 +12,21 @@
 (() => {
     // your code here
 })();
+
+
+document.querySelector('#run').addEventListener('click', function(){
+    window.lib.getPosts(function myPosts(error, array) {
+        if(error){
+            console.error(error);
+        }
+        array.forEach(function myComments(post) {
+            window.lib.getComments(post.id, (err, comments) => {
+                post.comments = comments;
+            });
+        });
+        console.log(array);
+    }); 
+});
+
+
+

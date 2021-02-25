@@ -11,4 +11,17 @@
 
 (() => {
     // your code here
+    document.querySelector('#run').addEventListener('click', function () {
+
+        async function getPerson() {
+            try {
+                const x = await window.lib.getPersons();
+                console.log(x);
+            } catch (error) {
+                console.error(error)
+            }
+        }
+        getPerson();
+
+    });
 })();
